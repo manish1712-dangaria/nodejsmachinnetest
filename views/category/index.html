@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>E-commerce Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/product">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/category">Category</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pagination">Views</a>
+          </li>
+        </ul>
+      </nav>
+  
+<div class="container-fluid">
+    <div class="container">
+        <h2>category form</h2>
+        <form class="form-horizontal" id="registration_merge" method="POST" action="/category">
+          <div class="form-group">
+            <label for="cname">Category Name :</label>
+            <input type="cname" class="form-control" id="cname" placeholder="Enter category name" name="cname">
+          </div>
+         
+          </div>
+          <button type="submit" class="btn btn-primary" id="save">save</button>
+          <button type="submit" class="btn btn-primary" id="update">update</button>
+          <button type="submit" class="btn btn-primary" id="delete">delete</button>
+        </form>
+    </div>
+  
+
+</body>
+</html>

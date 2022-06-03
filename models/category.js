@@ -1,0 +1,24 @@
+let Sequelize = require('sequelize');
+
+module.exports = function(connection, DataType){
+
+	let category = connection.define('category', {
+		c_id: {
+            type:DataType.INTEGER,
+            autoIncrement: true,
+            primaryKey:true
+        },
+		c_name: Sequelize.STRING,
+        
+	},
+
+	{
+		classMethods: {
+			associate: function(models) {
+			}  		
+		},
+    freezeTableName: true,
+});
+
+	return category;
+};
