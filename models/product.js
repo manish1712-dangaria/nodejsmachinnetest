@@ -1,8 +1,7 @@
-let Sequelize = require('sequelize');
-
+var Sequelize = require('sequelize');
 module.exports = function(connection, DataType){
 
-	let product = connection.define('product', {
+	var product = connection.define('product', {
 		p_id: {
             type:DataType.INTEGER,
             autoIncrement: true,
@@ -16,8 +15,7 @@ module.exports = function(connection, DataType){
 	{
 		classMethods: {
 				associate: function(models) {
-    // associations can be defined here
-   			lesseeName.hasMany(models.c_id, {foreignKey: 'pc_name'})
+		product.hasMany(models.category, {foreignKey: 'pc_name'})
   		}
 		},
     freezeTableName: true,

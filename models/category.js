@@ -1,5 +1,4 @@
-let Sequelize = require('sequelize');
-
+var Sequelize = require('sequelize');
 module.exports = function(connection, DataType){
 
 	let category = connection.define('category', {
@@ -8,14 +7,14 @@ module.exports = function(connection, DataType){
             autoIncrement: true,
             primaryKey:true
         },
-		c_name: Sequelize.STRING,
-        
+		c_name:{
+			type: Sequelize.STRING,
+		}
 	},
 
 	{
 		classMethods: {
-			associate: function(models) {
-			}  		
+					
 		},
     freezeTableName: true,
 });
