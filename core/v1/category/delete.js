@@ -1,11 +1,12 @@
 // models
-const category = require('../../../models').category
+const models = require('../../../models')
+const categorydb = models.category;
 
 class Delete { 
     deleteCategory(id){
         // console.log(body);
         return new Promise((resolve, reject) => {
-            category.destroy({
+            categorydb.destroy({
                 where: {
                   c_id: id
                 }

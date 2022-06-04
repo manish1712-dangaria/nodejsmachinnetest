@@ -1,10 +1,11 @@
 //models
-const product =require('../../../models').product
+const models =require('../../../models')
+const productb = models.product;
 class Save { 
     saveProduct(body){
         // console.log(body);
         return new Promise((resolve, reject) => {
-            product.create({
+            productb.create({
                 p_name :body.pname,
                 pc_name : body.pcname,
             }).then((data)=>{

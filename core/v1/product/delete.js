@@ -1,11 +1,12 @@
 // models
-const product = require('../../../models').product
+const models = require('../../../models')
+const productb = models.product;
 
 class Delete { 
     deleteProduct(id){
         // console.log(body);
         return new Promise((resolve, reject) => {
-            product.destroy({
+            productb.destroy({
                 where: {
                   p_id: id
                 }

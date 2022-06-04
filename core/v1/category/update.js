@@ -1,11 +1,12 @@
 // models
-const category = require('../../../models').category
+const models = require('../../../models');
+const categorydb = models.category;
 
 class Update { 
     updateCategory(params, body){
         // console.log(body);
         return new Promise((resolve, reject) => {
-            category.update(
+            categorydb.update(
                 { 
                  c_name :body.cname,
                 }, 

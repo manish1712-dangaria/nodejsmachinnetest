@@ -1,10 +1,11 @@
 //models
-const category =require('../../../models').category
+const models =require('../../../models')
+const categorydb = models.category;
 class Save { 
     saveCategory(body){
         // console.log(body);
         return new Promise((resolve, reject) => {
-            category.create({
+            categorydb.create({
                 c_name :body.cname,
             }).then((data)=>{
                 resolve(data);
